@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Solitaire — Add Score</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="site-header">  
+    <h1  class="logo">Add Score</h1>
+    <nav>
+      <ul class="nav">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./leaderboard.html">View Leaderboard</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="add-score-section">
+    <form id="addScoreForm">
+      <h4>please enter a name</h4>
+      <label>
+        Name:
+        <input type="text" id="playerName" required />
+      </label>
+      <button id="addScoreButton" type="submit">Add</button>
+    </form>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./solitaire.js"></script>
+</body>
+</html>
