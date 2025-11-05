@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Solitaire — Leaderboard</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="site-header">  
+    <h1 class="logo">Leaderboard</h1>
+    <nav>
+      <ul class="nav">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./add-score.html">Add Score</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="board-wrap">
+    <div id="empty" class="empty" style="display:none;">No scores yet.</div>
+    <table id="board" style="display:none;">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Score</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./solitaire.js"></script>
+</body>
+</html>

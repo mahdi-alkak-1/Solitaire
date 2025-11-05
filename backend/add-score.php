@@ -6,7 +6,7 @@
     header('Access-Control-Allow-Methods: POST, OPTIONS');
     header('Access-Control-Allow-Headers: Content-Type');
 
-    require_once __DIR__ . '/connection.php';
+    include('connection.php');
 
     if($_SERVER['REQUEST_METHOD'] !== 'POST'){
         echo json_encode(["error" => "Invalid request method"]);
