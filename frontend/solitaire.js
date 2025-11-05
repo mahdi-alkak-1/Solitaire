@@ -7,14 +7,13 @@ const LIST_URL = USE_SAME_ORIGIN
   ? '../backend/leaderboard.php'
   : 'http://localhost/SEF_Projects/SolitareGame/frontend/leaderboard.html';
 
-// --- Helpers ---
+
 function mmss(seconds) {
   const m = Math.floor(seconds / 60);
   const s = seconds % 60;
   return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
 }
-
-// --- Add Score page logic (runs only if form exists) ---
+ 
 (function wireAddScore() {
   const form = document.getElementById('addScoreForm');
   if (!form) return; // not on that page
@@ -51,7 +50,6 @@ function mmss(seconds) {
   });
 })();
 
-// --- Leaderboard page logic (runs only if table exists) ---
 (async function wireLeaderboard() {
   const table = document.getElementById('board');
   const tbody = document.getElementById('rows');
