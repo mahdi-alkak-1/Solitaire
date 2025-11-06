@@ -57,7 +57,7 @@ function mmss(seconds) {
   if (!table || !tbody || !empty) return; // not on that page
 
   try {
-    const res = await axios.get(LIST_URL);
+    const res = await axios.post(LIST_URL);
     if (!res.data || !res.data.ok) throw new Error('Bad response');
     const items = res.data.items || [];
 
