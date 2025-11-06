@@ -1,11 +1,5 @@
-
-const USE_SAME_ORIGIN = true;
-const ADD_URL  = USE_SAME_ORIGIN
-  ? '../backend/add-score.php'
-  : 'http://localhost/SEF_Projects/SolitareGame/frontend/add-score.html';
-const LIST_URL = USE_SAME_ORIGIN
-  ? '../backend/leaderboard.php'
-  : 'http://localhost/SEF_Projects/SolitareGame/frontend/leaderboard.html';
+const ADD_URL  = '../backend/add-score.php';
+const LIST_URL = '../backend/leaderboard.php';
 
 
 function mmss(seconds) {
@@ -50,14 +44,14 @@ function mmss(seconds) {
   });
 })();
 
-(async function wireLeaderboard() {
+(async function getScores() {
   const table = document.getElementById('board');
   const tbody = document.getElementById('rows');
   const empty = document.getElementById('empty');
   if (!table || !tbody || !empty) return; // not on that page
 
   try {
-    const res = await axios.post(LIST_URL);
+    const res = await axios.get(LIST_URL);
     if (!res.data || !res.data.ok) throw new Error('Bad response');
     const items = res.data.items || [];
 
