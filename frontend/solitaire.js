@@ -14,7 +14,7 @@ function mmss(seconds) {
   return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
 }
  
-(function wireAddScore() {
+(function AddScore() {
   const form = document.getElementById('addScoreForm');
   if (!form) return; // not on that page
 

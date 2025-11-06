@@ -47,7 +47,7 @@ button:hover{
     height: 100px;
     color: white;
     font-size: x-large;
-    border: solid;
+    border: solid 1px;
 
 }
 #addScoreButton{
