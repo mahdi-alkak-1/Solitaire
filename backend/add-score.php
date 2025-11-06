@@ -1,16 +1,6 @@
 <?php
 
-    header('Content-Type: application/json; charset=utf-8');
-    header('Access-Control-Allow-Origin: *');
-    header('Vary: Origin');
-    header('Access-Control-Allow-Methods: POST, OPTIONS');
-    header('Access-Control-Allow-Headers: Content-Type');
-
     include('connection.php');
-
-    if($_SERVER['REQUEST_METHOD'] !== 'POST'){
-        echo json_encode(["error" => "Invalid request method"]);
-    }
 
     $input = file_get_contents('php://input');
     $data = json_decode($input, true);
